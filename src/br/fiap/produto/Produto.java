@@ -15,6 +15,10 @@ public class Produto {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
+    public Produto(String nome) {
+        this.nome = nome;
+    }
+
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("#,##0.00");
@@ -25,11 +29,23 @@ public class Produto {
         return aux;
     }
 
+    public void adicionarEstoque(int quantidade) {
+        this.quantidadeEmEstoque += quantidade;
+    }
+
+    public void debitarEstoque(int quantidade) {
+        this.quantidadeEmEstoque -= quantidade;
+    }
+
     public String getNome() {
         return nome;
     }
 
     public double getValorUnitario() {
         return valorUnitario;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
     }
 }
