@@ -22,4 +22,13 @@ public class ItemProduto {
         aux += "Quantidade comprada: " + quantidadeComprada + "\n";
         return aux;
     }
+
+    public double calcularTotal() {
+        return produto.getValorUnitario() * quantidadeComprada;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
 }
+
